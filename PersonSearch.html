@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @import url("style/index.css");
+        @import url("style/menu.css");
+        input[type=text], input[type=password] {
+            width: 25%;
+        p {
+            margin-right: 5%; /* Отступ справа */
+            margin-left: 200px;
+            font-size: 14pt;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/lname.js"></script>
+    <h1 align="center"> Поиск студента</h1>
+    <hr>
+</head>
+<body>
+<div id="menu">
+    <center><a>МЕНЮ</a></center>
+    <li><a href="info.html">Информация о кафедре</a> <br></li>
+    <li><a href="docum.html">Нормативные документы</a> <br></li>
+    <li><a href="stats.html">Статистика</a> <br></li>
+    <li><a href="register.html">Добавление студента</a> <br></li>
+    <li><a href="up/upload.php">Учёт документов </a> <br></li>
+    <li><a href="PersonSearch.html">Поиск студента</a> <br></li>
+    <li><a href="index.html">Выход</a></a> <br></li>
+</div>
+<center>
+    <div class="search">
+        <form action="php/search.php" method="GET">
+            Имя:<br>
+            <input type="text" name="firstname" id="fname"><br>
+            Фамилия:<br>
+            <input type="text" name="lastname" id="lname"><br>
+            Отчество:<br>
+            <input type="text" name="middlename"><br>
+            Вид практики:<br>
+            <select name="type" required size="4">
+                <option value="Учебная [2 семестр]">Учебная [2 семестр]</option>
+                <option value="Производственная [6 семестр]">Производственная [6 семестр]</option>
+                <option value="Преддипломная [8 семестр]">Преддипломная [8 семестр]</option>
+                <option value="НИР [8 семестр]">НИР [8 семестр]</option>
+            </select> <br>
+            <br>
+            <button type="submit" class="btn btn-primary">Поиск</button>
+        </form>
+    </div>
+</center>
+
+</body>
+</html>

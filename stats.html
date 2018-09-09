@@ -1,0 +1,75 @@
+<html>
+<head>
+    <style>
+        @import url("style/index.css");
+        @import url("tabulous.css");
+
+        input[type=text], input[type=password] {
+            width: 25%;
+        }
+    </style>
+    <!--Load the AJAX API-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href='tabulous.css' rel='stylesheet' type='text/css'>
+    <script src="tabulous.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="jquery.min.js"></script>
+    <!--<link rel="stylesheet" href="reset-min.css">-->
+    <!--<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>-->
+    <link rel="stylesheet" href="style/tabs.css">
+    <script src="jquery-2.1.1.js"></script>
+    <h1 align="center">Статистика</h1>
+    <hr>
+</head>
+
+<body>
+
+<div class="menu1">
+    <br id="tab2"/><br id="tab3"/>
+    <a href="#tab1">Распределение студентов</a><a href="#tab2">Оценки студентов</a>
+    <div><h3>График распределения студентов по видам практики</h3>
+        <div id="chart_div"></div>
+    </div>
+    <div><h3>График оценок студентов</h3>
+        <div id="chart2"></div>
+    </div>
+</div>
+</div>
+
+<script>function PrintElem() {
+    var mywindow = window.open('', 'PRINT', 'height=400,width=600');
+    mywindow.document.write('<html><head>');
+    mywindow.document.write('<center><h1>Графики</h1>');
+    mywindow.document.write(document.getElementById("chart_div").innerHTML);
+    mywindow.document.write(document.getElementById("chart2").innerHTML + '</center>');
+    mywindow.document.write('</body></html>');
+    mywindow.document.close();
+    mywindow.focus(); // necessary for IE >= 10*/
+
+    mywindow.print();
+    mywindow.close();
+
+    return true;
+
+}// necessary for IE >= 10 mywindow.focus(); // necessary for IE >= 10*/ mywindow.print(); mywindow.close(); return true; }
+</script>
+<center>
+    <input type="button" value="Назад" class="btn btn-primary" onClick='location.href="/info.html"'>
+</center>
+<br>
+<center>
+    <div class="buttonHolder">
+        <input type="button" value="Печать" class="btn print-button" onclick="PrintElem();"/>
+</center>
+</div>
+<script src="js/charts.js"></script>
+<script src="js/chart2.js"></script>
+</body>
+</html>
+
+
+
+            
