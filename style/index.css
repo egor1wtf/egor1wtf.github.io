@@ -1,0 +1,33 @@
+body {
+    background: #c7b39b url(images/background.jpg);
+    color: #000000; /* Цвет текста */
+    background-size: 100%;
+
+}
+table{
+
+}
+label{
+    color: #000000;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+select{
+    color: #007bff;
+}
+th {
+    font-weight: normal;
+}
+textarea{
+    resize: none;
+}
+p {
+    margin-right: 5%; /* Отступ справа */
+    margin-left: 200px;
+    font-size: 14pt;
+}
