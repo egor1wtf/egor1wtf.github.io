@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Кафедра ИППО</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+        @import url("style/index.css");
+        .centerv{
+            width: 25%; /* Ширина элемента в пикселах */
+            padding: 10px; /* Поля вокруг текста */
+            margin: 5% 37% ; /* Выравниваем по центру */
+            background: rgba(128, 136, 123, 0.48); /* Цвет фона */
+        }
+    </style>
+    <h1 align="center"> Авторизация</h1>
+    <hr>
+</head>
+
+<body>
+<div class="centerv">
+    <form action="/php/auth.php">
+        <table cellpadding="3">
+            <tr>
+                <td><label>Логин:</label></td>
+                <td><input type="text" name="login" required></td>
+            </tr>
+            <tr>
+                <td><label>Пароль:</label></td>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr><td align="center"><button class="btn btn-primary" onclick="location.href='registration.html'" >Регистрация</button>
+                <td align="center"><button type="submit"  name="do_login" class="btn btn-primary" >Вход</button>
+                </td></tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
+
