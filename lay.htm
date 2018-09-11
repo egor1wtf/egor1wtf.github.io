@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script language="JavaScript">
+<!-- hide
+function showHide(name)
+{
+if (document.all[name].style.visibility == "hidden" )
+document.all[name].style.visibility = "visible";
+ else
+document.all[name].style.visibility = "hidden";
+}
+// -->
+</script>
+</head>
+<body>
+<STYLE TYPE="text/css">
+<!--
+#sloj
+{visibility: visible ; } 
+//-->
+</STYLE>
+В каком году был переименован университет в "РТУ - МИРЭА"
+<DIV ID='sloj'>2018 </DIV> 
+<form>
+<input type="button" value="Ответ" onClick="showHide('sloj');">
+</form>
+<STYLE TYPE="text/css">
+<!--
+#sloj1
+{ position: absolute; left:130px; top: 100px; visibility: visible ;z-index= 0; } 
+#sloj2
+{ position: absolute; left:200px; top: 180px; visibility: visible ;z-index=1; }
+	 .light {
+    text-shadow: #FFFFFF 0 0 2px  ; /* Свечение голубого цвета */
+    color: #000000;
+		 font-family: sans-serif;
+   }
+//-->
+</STYLE>
+<DIV ID='sloj1'><img src="it.PNG"  width=60%  height=100%></DIV> 
+<DIV ID='sloj2' class = "light"><font size=+2 > Институт ИТ </DIV>
+
+</body>
+</html>
+
