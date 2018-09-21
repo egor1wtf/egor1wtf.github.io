@@ -4,6 +4,17 @@
 <head>
     <meta charset="UTF-8">
 	<meta name="yandex-verification" content="2393ae162ee5c086" />
+	<script>
+      //Строки для поиска
+    UrlYandex="http://www.yandex.ru/yandsearch?rpt=rad&text=";
+    UrlGoogle="http://www.google.ru/search?hl=ru&newwindow=1&q=";
+    Urlmail_ru="http://go.mail.ru/search?fm=1&rf=e.mail.ru&q=";
+	function FindText(Url){
+        var FullUrl=Url+document.find.searchtext.value;
+         //Проверяем установлен ли флажок
+         if (document.find.newwin.checked){  var FindWin=window.open(FullUrl); }
+         else{ location.href = FullUrl; } }
+    </script>
     <title>Title</title>
     <style>
         @import url("style/index.css");
@@ -38,18 +49,7 @@
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-
 9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-	<script>
-      //Строки для поиска
-    UrlYandex="http://www.yandex.ru/yandsearch?rpt=rad&text=";
-    UrlGoogle="http://www.google.ru/search?hl=ru&newwindow=1&q=";
-    Urlmail_ru="http://go.mail.ru/search?fm=1&rf=e.mail.ru&q=";
-	function FindText(Url){
-        var FullUrl=Url+document.find.searchtext.value;
-         //Проверяем установлен ли флажок
-         if (document.find.newwin.checked){  var FindWin=window.open(FullUrl); }
-         else{ location.href = FullUrl; } }
-    </script>
-
+	
 </head>
 <body>
 	
@@ -75,7 +75,7 @@ A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="a
     <li><a href="index.html">Выход</a></a> <br></li>
 </div>
 <div class="search">
-<form>
+<form name = "find">
   Найти:  <br>
       <input type="text" name="searchtext" size=40><br>
       <input type="checkbox" name="newwin">Открыть в новом окне<br>
