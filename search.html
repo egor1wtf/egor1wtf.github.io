@@ -9,13 +9,15 @@
     UrlYandex="http://www.yandex.ru/yandsearch?rpt=rad&text=";
     UrlGoogle="http://www.google.ru/search?hl=ru&newwindow=1&q=";
     Urlmail_ru="http://go.mail.ru/search?fm=1&rf=e.mail.ru&q=";
+	Urlrambler="https://nova.rambler.ru/search?utm_source=head&utm_campaign=self_promo&utm_medium=enter&utm_content=search&_openstat=UmFtYmxlcl9NYWluOzs7&query="
+	Urlyahoo="https://search.yahoo.com/search?p="
 	function FindText(Url){
         var FullUrl=Url+document.find.searchtext.value;
          //Проверяем установлен ли флажок
          if (document.find.newwin.checked){  var FindWin=window.open(FullUrl); }
          else{ location.href = FullUrl; } }
     </script>
-    <title>Title</title>
+    <title>Поиск</title>
     <style>
         @import url("style/index.css");
         @import url("style/menu.css");
@@ -62,7 +64,7 @@ A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="a
         integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
 <script src="banner/scroll.js"></script>
-<h1 align="center"> Информация о кафедре</h1>
+<h1 align="center"> Поиск</h1>
 <hr>
 <div id="menu">
     <center><a>МЕНЮ</a></center>
@@ -84,8 +86,13 @@ A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="a
         onClick="FindText(UrlYandex)">
       <input type="button" value="Google"
         onClick="FindText(UrlGoogle)">
-	  <input type="button" value="Mail_ru"
+	  <input type="button" value="Mail"
         onClick="FindText(Urlmail_ru)">
+	  <input type="button" value="Rambler"
+        onClick="FindText(Urlrambler)">
+	<input type="button" value="Yahoo"
+        onClick="FindText(Urlyahoo)">
+	
 </form>
 </div>
 
