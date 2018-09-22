@@ -11,6 +11,7 @@
     Urlmail_ru="http://go.mail.ru/search?fm=1&rf=e.mail.ru&q=";
 	Urlrambler="https://nova.rambler.ru/search?utm_source=head&utm_campaign=self_promo&utm_medium=enter&utm_content=search&_openstat=UmFtYmxlcl9NYWluOzs7&query="
 	Urlyahoo="https://search.yahoo.com/search?p="
+	Urlwolf="www.wolframalpha.com/input/?i="
 	function FindText(Url){
         var FullUrl=Url+document.find.searchtext.value;
          //Проверяем установлен ли флажок
@@ -92,6 +93,8 @@ A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="a
         onClick="FindText(Urlrambler)">
 	<input type="button" value="Yahoo"
         onClick="FindText(Urlyahoo)">
+	<input type="button" value="Wolfram|Alpha"
+        onClick="FindText(Urlwolf)">
 	
 </form>
 </div>
