@@ -1,6 +1,6 @@
 <?php
+require '../vendor/autoload.php';
 include 'database.php';
-require_once '../vendor/phpoffice/phpword/bootstrap.php';
 
 $lastname = $_POST['lastname'];
 $firstname = $_POST['firstname'];
@@ -18,16 +18,16 @@ while( $row = mysqli_fetch_assoc($resultm) ){
     $kek = $row['id'];
 }
 // Надо починить вывод
-//$fileName = '../doc/input.docx';
-//
-//$word = new \PhpOffice\PhpWord\TemplateProcessor($fileName);
-//$word->setValue('lastname', $lastname);
-//$word->setValue('firstname', $firstname);
-//$word->setValue('middlename', $middlename);
-//$word->setValue('type',$type);
-//$word->setValue('n_group',$n_group);
-//$word->setValue('date',date("d.m.y"));
-//$word->saveAs('output.docx');
+$fileName = '../doc/input.docx';
+
+$word = new \PhpOffice\PhpWord\TemplateProcessor($fileName);
+$word->setValue('lastname', $lastname);
+$word->setValue('firstname', $firstname);
+$word->setValue('middlename', $middlename);
+$word->setValue('type',$type);
+$word->setValue('n_group',$n_group);
+$word->setValue('date',date("d.m.y"));
+$word->saveAs('output.docx');
 
 
 echo "<script type='text/javascript'>alert('Ваш уникальный идентификатор = $kek'); window.location = 'output.docx';</script>";

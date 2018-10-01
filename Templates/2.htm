@@ -1,0 +1,72 @@
+<IMG SRC="russiamap.jpg" WIDTH="400" HEIGHT="230" BORDER="0"
+USEMAP="#russia">
+<MAP NAME="russia">
+<AREA SHAPE="rect" COORDS="63,70,162,85" HREF="link1.html"
+onMouseOver="showLayer('link1');"onMouseOut="hideLayer('Iink1');"> 
+<AREA SHAPE="rect" COORDS="98,137,193,157" HREF="link2.html" 
+onMouseOver="showLayer('link2');" onMouseOut="hideLayer('link2');">
+<AREA SHAPE="rect" COORDS="249,125,326,141" HREF="link3.html"
+ onMouseOver="showLayer('link3');" onMouseOut="hideLayer('link3');">
+ <AREA SHAPE="rect" COORDS="289,89,368,105" HREF="link4.html" 
+onMouseOver="showLayer('link4');" onMouseOut="hideLayer('link4');">
+</MAP>
+Конструкции onMouseOver и onMouseOut являются событиями языка JavaScript (наве-дение и снятие курсора мыши с активной области на карте). Каждой активной области с заданными координатами должен соответствовать информационный блок со своим идентификатором (link1, link2, link3 и т. д.).
+В результате при перемещении курсора, например над надписью "Санкт-Петербург" на карте, аналогичная надпись, но уже в текстовом виде, появляется прямо под изображе-нием карты России (рис. 1, листинг 4.). Как уже было сказано, наполнение слоев мож-но осуществлять в соответствии с индивидуальными предпочтениями и оформитель-скими требованиями: вместо текстовых блоков вставлять графику, таблицы, гиперс-сылки и др.
+
+Листинг 4. Применение динамических информационных блоков  (итоговый листинг)
+<HTML> 
+<HEAD>
+<TITLE>Применение динамических информационных блоков</TITLE > 
+<SCRIPT LANGUAGE="JavaScript1.2"> 
+<!--
+var ie = document.all ? 1 : 0; 
+var ns = document.layers ? 1 : 0; 
+function showLayer(name)
+{
+if (ie)
+document.all [name].style.visibility = "visible";
+ else if(ns)
+document.layers [name].visibility = "show";
+}
+function hideLayer(name)
+{
+if(ie)
+document.all [name].style.visibility = "hidden";
+ else if (ns)
+document.layers [name].visibility = "hide";
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="black" LINK="#OOFFOO" ALINK="#OOFFOO" VLINK="blue">
+<STYLE TYPE="text/css">
+<!--
+#Ilink1
+{ position: absolute; left: 160px; top: 250px; visibility: hidden; } 
+#link2
+{ position: absolute; left: 160px; top: 250px; visibility: hidden; }
+ #link3
+{ position: absolute; left: 160px; top: 250px; visibility: hidden; } 
+#link4
+{ position: absolute; left: 160px; top: 250px; visibility: hidden; }
+//-->
+</STYLE>
+<DIV ID='link1'>Санкт-Петербург</DIV> 
+<DIV ID='Iink2' >Ростов-на-Дону</DIV > 
+<DIV ID='link3'>Kpacноярск</DIV> 
+<DIV ID='link4'>Владивосток</DIV>
+<IMG SRC="russiamap.jpg" WIDTH="400" HEIGHT="230" BORDER="0"
+USEMAP="#russia">
+<MAP NAME="russia">
+<AREA SHAPE="rect" COORDS="63,70,162,85" HREF="link1.html"
+onMouseOver="showLayer('link1');"onMouseOut="hideLayer('Iink1');"> 
+<AREA SHAPE="rect" COORDS="98,137,193,157" HREF="link2.html" 
+onMouseOver="showLayer('link2');" onMouseOut="hideLayer('link2');">
+<AREA SHAPE="rect" COORDS="249,125,326,141" HREF="link3.html"
+ onMouseOver="showLayer('link3');" onMouseOut="hideLayer('link3');">
+ <AREA SHAPE="rect" COORDS="289,89,368,105" HREF="link4.html" 
+onMouseOver="showLayer('link4');" onMouseOut="hideLayer('link4');">
+</MAP>
+</BODY>
+</HTML>
+

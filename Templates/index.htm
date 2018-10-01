@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Документ без названия</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+	<STYLE TYPE="text/css">
+<!--
+#Ilink1
+{ position: absolute; left: 160px; top: 250px; visibility: hidden; } 
+#link2
+{ position: absolute; left: 160px; top: 250px; visibility: hidden; }
+ #link3
+{ position: absolute; left: 160px; top: 250px; visibility: hidden; } 
+#link4
+{ position: absolute; left: 160px; top: 250px; visibility: hidden; }
+//-->
+</STYLE>
+</head>
+
+<body>
+<DIV ID='link1'>Санкт-Петербург</DIV> 
+<DIV ID='Iink2'>Ростов-на-Дону</DIV > 
+<DIV ID='link3'>Kpacноярск</DIV> 
+<DIV ID='link4'>Владивосток</DIV>
+<IMG SRC="russiamap.jpg" WIDTH="400" HEIGHT="230" BORDER="0"
+USEMAP="#russia">
+<MAP NAME="russia">
+<AREA SHAPE="rect" COORDS="63,70,162,85" HREF="link1.html"
+onMouseOver="showLayer('link1');"onMouseOut="hideLayer('Iink1');"> 
+<AREA SHAPE="rect" COORDS="98,137,193,157" HREF="link2.html" 
+onMouseOver="showLayer('link2');" onMouseOut="hideLayer('link2');">
+<AREA SHAPE="rect" COORDS="249,125,326,141" HREF="link3.html"
+ onMouseOver="showLayer('link3');" onMouseOut="hideLayer('link3');">
+ <AREA SHAPE="rect" COORDS="289,89,368,105" HREF="link4.html" 
+onMouseOver="showLayer('link4');" onMouseOut="hideLayer('link4');">
+</MAP>
+
+</body>
+</html>
